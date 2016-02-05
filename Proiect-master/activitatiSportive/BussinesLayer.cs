@@ -17,7 +17,7 @@ namespace activitatiSportive
             SqlParameter[] param;
             SqlParameter par1 = new SqlParameter("@nume", s1);
             SqlParameter par2 = new SqlParameter("@prenume", s2);
-            SqlParameter par3 = new SqlParameter("@academie", s3);
+            SqlParameter par3 = new SqlParameter("@academie",s3);
             SqlParameter par4 = new SqlParameter("@an", s4);
             SqlParameter par5 = new SqlParameter("@spec", s5);
             SqlParameter par6 = new SqlParameter("@gre", s6);
