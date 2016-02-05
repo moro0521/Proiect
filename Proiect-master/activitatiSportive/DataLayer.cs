@@ -10,7 +10,8 @@ namespace activitatiSportive
    public class dbConnection
     {
         private SqlDataAdapter myAdapter;
-        private SqlConnection conn;
+        private SqlConnection conn; //public
+        //private SqlConnection conn;
 
         /// <constructor>
         /// Initialise Connection
@@ -18,7 +19,7 @@ namespace activitatiSportive
         public dbConnection()
         {
             myAdapter = new SqlDataAdapter();
-            conn = new SqlConnection("Data Source=ARKWRIGHT-PC;Initial Catalog=ActivitatiSportive;Integrated Security=True");
+            conn = new SqlConnection("Data Source=DESKTOP-57TNJKA;Initial Catalog=ActivitatiSportive;Integrated Security=True");
         }
 
         /// <method>
@@ -72,6 +73,7 @@ namespace activitatiSportive
             SqlCommand myCommand = new SqlCommand();
             try
             {
+                
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
                 myCommand.Parameters.AddRange(sqlParameter);
@@ -113,5 +115,7 @@ namespace activitatiSportive
             }
             return true;
         }
+       // @override
+        
     }
 }

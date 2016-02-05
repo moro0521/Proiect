@@ -1,5 +1,0 @@
-C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\bin\activitatiSportive.dll
-C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\bin\activitatiSportive.pdb
-C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.csprojResolveAssemblyReference.cache
-C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.dll
-C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.pdb
