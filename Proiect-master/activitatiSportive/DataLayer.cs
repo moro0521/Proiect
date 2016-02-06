@@ -10,8 +10,8 @@ namespace activitatiSportive
    public class dbConnection
     {
         private SqlDataAdapter myAdapter;
-        private SqlConnection conn; //public
-        //private SqlConnection conn;
+        private SqlConnection conn;
+        int test = 0;
 
         /// <constructor>
         /// Initialise Connection
@@ -73,12 +73,11 @@ namespace activitatiSportive
             SqlCommand myCommand = new SqlCommand();
             try
             {
-                
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
                 myCommand.Parameters.AddRange(sqlParameter);
                 myAdapter.InsertCommand = myCommand;
-                myCommand.ExecuteNonQuery();
+                test = myCommand.ExecuteNonQuery();
             }
             catch (SqlException e)
             {

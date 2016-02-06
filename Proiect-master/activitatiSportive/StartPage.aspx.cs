@@ -13,6 +13,7 @@ namespace activitatiSportive
     {
         protected static bool logat = false;
         protected BussinesLayer bus;
+        protected string DataCompetitie;
         protected void Page_Load(object sender, EventArgs e)
         {
             bus = new BussinesLayer();
@@ -27,7 +28,7 @@ namespace activitatiSportive
 
         protected void Logare(object sender, EventArgs e)
         {
-           
+
             bus = new BussinesLayer();
             if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 1)
             {
@@ -39,6 +40,7 @@ namespace activitatiSportive
                 Label1.Visible = false;
                 Label2.Visible = false;
                 Password.Visible = false;
+
                 UserName.Visible = false;
                 userValidation.Visible = false;
                 passwordValidation.Visible = false;
@@ -52,29 +54,30 @@ namespace activitatiSportive
 
         protected void Gridview1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+
             if (e.CommandName == "inscriereCompetitie")
             {
                 string numeCompetitie = e.CommandArgument.ToString();
-                // do you what you need to do
+                
                 if (logat == false)
                 {
                     MesajLogare.Visible = true;
                 }
                 else
                 {
-                    String textul; 
-                    for(int i = 0; i < GridView1.Rows.Count ; i++) {
+                    for (int i = 0; i < GridView1.Rows.Count; i++)
+                    {
                         for (int j = 0; j < GridView1.Rows[i].Cells.Count; j++)
                         {
                             LinkButton butonul = (LinkButton)GridView1.Rows[i].Cells[j].FindControl("numeCompetitie");
-                            textul = butonul.Text;
-                            if (GridView1.Rows[i].Cells[0].Text == numeCompetitie)
+                            if (butonul.Text == numeCompetitie)
                             {
-                                TextBox1.Text = GridView1.Rows[i].Cells[0].Text;
+                                DataCompetitie = GridView1.Rows[i].Cells[1].Text.ToString();
                             }
                         }
                     }
-                   // bus.inscriereUtilizatorCompetitie(UserName.Text,numeCompetitie,
+                    bus.inscriereUtilizatorCompetitie(UserName.Text, numeCompetitie, DataCompetitie);
+                    InscriereCompetitie.Visible=true;
                 }
             }
         }

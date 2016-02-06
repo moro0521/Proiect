@@ -11,33 +11,32 @@ namespace activitatiSportive
     public class BussinesLayer
     {
         dbConnection conexiune = new dbConnection();
-        public void InsertInStdPart( string s1, string s2, string s3, string s4,string s5, string s6)
-        {
-
-            SqlParameter[] param;
-            SqlParameter par1 = new SqlParameter("@nume", s1);
-            SqlParameter par2 = new SqlParameter("@prenume", s2);
-            SqlParameter par3 = new SqlParameter("@academie",s3);
-            SqlParameter par4 = new SqlParameter("@an", s4);
-            SqlParameter par5 = new SqlParameter("@spec", s5);
-            SqlParameter par6 = new SqlParameter("@gre", s6);
-            param = new SqlParameter[] { par1,par2,par3,par4,par5,par6};
-            string cmd = @"INSERT INTO StudentiParticipanti(Nume, Prenume, Academie, An_Studiu, Specializarea, Greutatea ) VALUES (@nume, @prenume, @academie, @an, @spec, @gre)";
-            conexiune.executeInsertQuery(cmd, param);
-        }
-        public void OkayUtilizator(String Nume,String Prenume,String Statut, String AdresaEmail, String Parola)
+        public void OkayUtilizator(String Nume, String Prenume, String Statut, String AdresaEmail, String Parola)
         {
             SqlParameter[] param;
             SqlParameter par1 = new SqlParameter("@Nume", Nume);
             SqlParameter par2 = new SqlParameter("@Prenume", Prenume);
             SqlParameter par3 = new SqlParameter("@Statut", Statut);
             SqlParameter par4 = new SqlParameter("@adresaEmail", AdresaEmail);
-            SqlParameter par5 = new SqlParameter("@parola",Parola);
+            SqlParameter par5 = new SqlParameter("@parola", Parola);
             param = new SqlParameter[] { par1, par2, par3, par4, par5 };
             string cmd = @"INSERT INTO UTILIZATORI(Nume,Prenume,Statut,AdresaDeEmail,Password) VALUES (@Nume,@Prenume,@Statut,@adresaEmail,@parola);";
             conexiune.executeInsertQuery(cmd, param);
 
         }
+        public void OkayRemove(String NumeR, String PrenumeR, String StatutR, String AdrEmailR, String PasswdR)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@NumeR", NumeR);
+            SqlParameter par2 = new SqlParameter("@PrenumeR", PrenumeR);
+            SqlParameter par3 = new SqlParameter("@StatutR", StatutR);
+            SqlParameter par4 = new SqlParameter("@AdrEmailR", AdrEmailR);
+            SqlParameter par5 = new SqlParameter("@PasswdR", PasswdR);
+            param = new SqlParameter[] { par1, par2, par3, par4, par5 };
+            string cmd = @"DELETE FROM UTILIZATORI(Nume,Prenume,Statut,AdresaDeEmail,Password) VALUES (@NumeR,@PrenumeR,@StatutR,@AdrEmailR,@PasswdR);";
+            conexiune.executeInsertQuery(cmd, param);
+        }
+
         public void OkayCompetitie(String NumeCompetitie, String DataCompetitie, String Locatie, String StatutCompetitie)
         {
             SqlParameter[] param;
@@ -45,9 +44,21 @@ namespace activitatiSportive
             SqlParameter par2 = new SqlParameter("@DataCompetitie", DataCompetitie);
             SqlParameter par3 = new SqlParameter("@Locatie", Locatie);
             SqlParameter par4 = new SqlParameter("@StatutCompetitie", StatutCompetitie);
-            
+
             param = new SqlParameter[] { par1, par2, par3, par4 };
             string cmd = @"INSERT INTO COMPETITIE(NumeCompetitie,DataCompetitie,Locatie,StatutCompetitie) VALUES (@NumeCompetitie,@DataCompetitie,@Locatie,@StatutCompetitie)";
+            conexiune.executeInsertQuery(cmd, param);
+        }
+        public void OkayAccidentari(String id, String idCompetitieA, String IdUtilizatorA, String TipulAccidentului)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@id", id);
+            SqlParameter par2 = new SqlParameter("@idCompetitieA", idCompetitieA);
+            SqlParameter par3 = new SqlParameter("@IdUtilizatorA", IdUtilizatorA);
+            SqlParameter par4 = new SqlParameter("@TipulAccidentului", TipulAccidentului);
+
+            param = new SqlParameter[] { par1, par2, par3, par4 };
+            string cmd=@"INSERT INTO ACCIDENTARI(id,idCompetitie,idUtilizator,TipulAccidentului) VALUES(@id,@idCompetitieA,@IdUtilizatorA,@TipulAccidentului)";
             conexiune.executeInsertQuery(cmd, param);
         }
         public int LogareLaBazaDeDate(string adresaEmail,string parola,Label vUsername,Label vPassword)
@@ -94,9 +105,24 @@ namespace activitatiSportive
             afisare2.DataSource = conexiune.executeSelectQuery(cmd, param);
             afisare2.DataBind();
         }
-        public void inscriereUtilizatorCompetitie(String Utilizator,String Competitie,String DataCompetitie)
-        { 
-            
+        public void inscriereUtilizatorCompetitie(string Utilizator,string Competitie,string DataCompetitie)
+        {
+            SqlParameter[] param = new SqlParameter[0];
+            string cmd=@"select id FROM Utilizatori WHERE AdresaDeEmail='"+ Utilizator+"'";
+            DataTable tab = new DataTable();
+            tab = conexiune.executeSelectQuery(cmd, param);
+            int idUtilizator = int.Parse(tab.Rows[0][0].ToString());
+            cmd = @"select idCompetitie FROM Competitie WHERE NumeCompetitie = '" + Competitie + "' " + "AND DataCompetitie = '" + DataCompetitie + "'";
+            tab = conexiune.executeSelectQuery(cmd, param);
+            int idCompetitie = int.Parse(tab.Rows[0][0].ToString());
+            SqlParameter[] parametri;
+            SqlParameter param1 = new SqlParameter("@idCompetitie", idCompetitie);
+            SqlParameter param2 = new SqlParameter("@dataCompetitie", DataCompetitie);
+            SqlParameter param3 = new SqlParameter("@idUtilizator", idUtilizator);
+            SqlParameter param4 = new SqlParameter("@Status", "In asteptare");
+            parametri = new SqlParameter[] { param1, param2, param3, param4 };
+            cmd = @"INSERT INTO TabelaInscrieri(idCompetitie,DataInscriere,idUtilizator,Status) VALUES (@idCompetitie,@dataCompetitie,@idUtilizator,@Status)";
+            conexiune.executeInsertQuery(cmd, parametri);
         }
     }
 }

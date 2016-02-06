@@ -11,6 +11,8 @@ namespace activitatiSportive
     {
         BussinesLayer bs = new BussinesLayer();
         BussinesLayer bs2 = new BussinesLayer();
+        BussinesLayer bs3 = new BussinesLayer();
+        BussinesLayer bs4 = new BussinesLayer();
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,6 +65,41 @@ namespace activitatiSportive
         protected void OkayCompetitie_Click(object sender, EventArgs e)
         {
             bs2.OkayCompetitie(NumeCompetitie.Text, DataCompetitie.Text, Locatie.Text, StatutCompetitie.Text);
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            id.Visible = true;
+            idCompetitieA.Visible = true;
+            IdUtilizatorA.Visible = true;
+            TipulAccidentului.Visible = true;
+
+            OkayAccidentari.Visible = true;
+        }
+
+        protected void OkayAccidentari_Click(object sender, EventArgs e)
+        {
+            bs3.OkayAccidentari(id.Text, idCompetitieA.Text, IdUtilizatorA.Text, TipulAccidentului.Text);
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            NumeR.Visible = true;
+            PrenumeR.Visible = true;
+            StatutR.Visible = true;
+            AdrEmailR.Visible = true;
+            PasswdR.Visible = true;
+            OkayRemove.Visible = true;
+        }
+
+        protected void OkayRemove_Click(object sender, EventArgs e)
+        {
+            bs4.OkayRemove(NumeR.Text, PrenumeR.Text, StatutR.Text, AdrEmailR.Text, PasswdR.Text);
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StartPage.aspx");
         }
 
 

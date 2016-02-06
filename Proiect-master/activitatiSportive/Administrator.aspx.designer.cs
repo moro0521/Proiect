@@ -94,13 +94,13 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.TextBox NumeCompetitie;
         
         /// <summary>
-        /// IdCompetitie control.
+        /// Locatie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IdCompetitie;
+        protected global::System.Web.UI.WebControls.TextBox Locatie;
         
         /// <summary>
         /// InsUtl control.
@@ -148,6 +148,15 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.Button OkayCompetitie;
         
         /// <summary>
+        /// id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox id;
+        
+        /// <summary>
         /// Button5 control.
         /// </summary>
         /// <remarks>
@@ -175,15 +184,6 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Locatie control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Locatie;
-        
-        /// <summary>
         /// StatutCompetitie control.
         /// </summary>
         /// <remarks>
@@ -191,5 +191,95 @@ namespace activitatiSportive {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox StatutCompetitie;
+        
+        /// <summary>
+        /// idCompetitieA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idCompetitieA;
+        
+        /// <summary>
+        /// IdUtilizatorA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IdUtilizatorA;
+        
+        /// <summary>
+        /// TipulAccidentului control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TipulAccidentului;
+        
+        /// <summary>
+        /// OkayAccidentari control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button OkayAccidentari;
+        
+        /// <summary>
+        /// NumeR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NumeR;
+        
+        /// <summary>
+        /// OkayRemove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button OkayRemove;
+        
+        /// <summary>
+        /// PrenumeR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PrenumeR;
+        
+        /// <summary>
+        /// StatutR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox StatutR;
+        
+        /// <summary>
+        /// AdrEmailR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AdrEmailR;
+        
+        /// <summary>
+        /// PasswdR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PasswdR;
     }
 }

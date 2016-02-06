@@ -21,10 +21,10 @@
         }
         .auto-style3 {
             position: absolute;
-            top: 393px;
-            left: 743px;
+            top: 172px;
+            left: 72px;
             z-index: 1;
-            width: 189px;
+            width: 226px;
         }
     </style>
 </head>
@@ -39,7 +39,9 @@
         </p>
         <div style="margin-left: 60px; height: 25px; width: 600px;">
         <asp:Label ID="MesajLogare" runat="server" CssClass="auto-style1" ForeColor="Red" Text="Trebuie mai intai sa te loghezi pentru a te putea inscrie la competitie" Visible="False"></asp:Label>
+        <asp:Label ID="InscriereCompetitie" runat="server" CssClass="auto-style3" ForeColor="#33CC33" Text="Te ai inscris la competitie" Visible="False"></asp:Label>
         </div>
+        
         <div style="display:inline-block; margin-right:10px; width: 393px; margin-top: 0px;">
             <asp:GridView ID="GridView1" runat="server" Height="67px" autogeneratecolumns="false" style="margin-left: 60px; " Width="16px" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnRowCommand="Gridview1_RowCommand" CssClass="auto-style2">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
@@ -81,7 +83,7 @@
             <br />
         </div>
         
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style3"></asp:TextBox>
+        &nbsp;
         
         <br />
         <asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 10px; top: 441px; position: absolute; height: 136px; width: 782px">

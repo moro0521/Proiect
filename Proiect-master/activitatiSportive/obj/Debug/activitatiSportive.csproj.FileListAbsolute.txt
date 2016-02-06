@@ -3,8 +3,8 @@ C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\bin\activitatiSpo
 C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.dll
 C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.pdb
 C:\Users\arkwright\Documents\GitHub\Proiect\activitatiSportive\obj\Debug\activitatiSportive.csprojResolveAssemblyReference.cache
-C:\Users\moro\Downloads\Proiect-master (4)\Proiect-master\activitatiSportive\bin\activitatiSportive.dll
-C:\Users\moro\Downloads\Proiect-master (4)\Proiect-master\activitatiSportive\bin\activitatiSportive.pdb
-C:\Users\moro\Downloads\Proiect-master (4)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.dll
-C:\Users\moro\Downloads\Proiect-master (4)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.pdb
-C:\Users\moro\Downloads\Proiect-master (4)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.csprojResolveAssemblyReference.cache
+C:\Users\moro\Downloads\Proiect-master (8)\Proiect-master\activitatiSportive\bin\activitatiSportive.dll
+C:\Users\moro\Downloads\Proiect-master (8)\Proiect-master\activitatiSportive\bin\activitatiSportive.pdb
+C:\Users\moro\Downloads\Proiect-master (8)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.dll
+C:\Users\moro\Downloads\Proiect-master (8)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.pdb
+C:\Users\moro\Downloads\Proiect-master (8)\Proiect-master\activitatiSportive\obj\Debug\activitatiSportive.csprojResolveAssemblyReference.cache
